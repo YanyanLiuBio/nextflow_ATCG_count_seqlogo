@@ -1,7 +1,7 @@
 nextflow.enable.dsl = 2
 
-include { GET_ATCG_COUNTS } from './modules/GET_ATCG_COUNTS.nf'
-include { SEQLOGO } from './modules/SEQLOGO.nf'
+include { GET_ATCG_COUNTS } from './modules/gt_ATCG_counts.nf'
+include { SEQLOGO } from './modules/seqlogo.nf'
 
 fq_ch = Channel
     .fromPath("${params.input}/*_R{1,2}_001.fastq.gz")
