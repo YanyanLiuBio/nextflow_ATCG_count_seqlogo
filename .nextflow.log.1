@@ -1,0 +1,83 @@
+Oct-04 01:50:38.151 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /software/nextflow-ATCG-counts/atcg_counts.nf -c /software/nextflow-ATCG-counts/nextflow.config -work-dir 's3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/' --run 20250929_MiSeq-Yoda --analysis ATCG_counts_w_N --plate plate_1_FASTQ -bg -resume
+Oct-04 01:50:38.397 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Oct-04 01:50:38.440 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /software/nextflow-ATCG-counts/nextflow.config
+Oct-04 01:50:38.450 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /software/nextflow-ATCG-counts/nextflow.config
+Oct-04 01:50:38.451 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /software/nextflow-ATCG-counts/nextflow.config
+Oct-04 01:50:38.451 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /software/nextflow-ATCG-counts/nextflow.config
+Oct-04 01:50:38.510 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-04 01:50:40.488 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-04 01:50:40.588 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=1 by probing script field
+Oct-04 01:50:40.656 [main] INFO  nextflow.cli.CmdRun - Launching `/software/nextflow-ATCG-counts/atcg_counts.nf` [happy_venter] DSL1 - revision: da4112b2b0
+Oct-04 01:50:40.678 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/yanyan/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Oct-04 01:50:40.682 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[nf-amazon@1.7.2]
+Oct-04 01:50:40.702 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-04 01:50:40.704 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-04 01:50:40.717 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Oct-04 01:50:40.740 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-04 01:50:40.740 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 1.7.2
+Oct-04 01:50:40.766 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@1.7.2' resolved
+Oct-04 01:50:40.767 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@1.7.2'
+Oct-04 01:50:40.800 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@1.7.2
+Oct-04 01:50:40.901 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
+Oct-04 01:50:40.998 [main] DEBUG nextflow.Session - Session uuid: 8b73320f-5a64-4b0f-a685-e8b7fd00da98
+Oct-04 01:50:40.999 [main] DEBUG nextflow.Session - Run name: happy_venter
+Oct-04 01:50:41.000 [main] DEBUG nextflow.Session - Executor pool size: 16
+Oct-04 01:50:41.027 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
+Oct-04 01:50:41.041 [main] DEBUG nextflow.Global - Using AWS credentials defined in nextflow config file
+Oct-04 01:50:41.042 [main] DEBUG nextflow.file.FileHelper - AWS S3 config details: {secret_key=5WgiGB.., region=us-east-2, max_error_retry=5, access_key=AKIAXO..}
+Oct-04 01:50:42.453 [main] DEBUG c.u.s3fs.S3FileSystemProvider - Using S3 multi-part downloader
+Oct-04 01:50:42.458 [main] DEBUG c.u.s3fs.ng.S3ParallelDownload - Creating S3 download thread pool: workers=10; chunkSize=10 MB; queueSize=10000; max-mem=1 GB; maxAttempts=5; maxDelay=1m 30s; pool-capacity=103
+Oct-04 01:50:42.523 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.5 build 5708
+  Created: 15-07-2022 16:09 UTC 
+  System: Linux 4.14.299-152.520.amzn1.x86_64
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 1.8.0_342-b07
+  Encoding: UTF-8 (UTF-8)
+  Process: 63475@ip-172-31-55-139 [172.31.55.139]
+  CPUs: 16 - Mem: 62.9 GB (4.3 GB) - Swap: 0 (0)
+Oct-04 01:50:43.361 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work
+
+Oct-04 01:50:43.361 [main] DEBUG nextflow.Session - Work-dir: s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work [null]
+Oct-04 01:50:43.488 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[AwsBatchExecutor]
+Oct-04 01:50:43.515 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-04 01:50:43.567 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-04 01:50:43.597 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Oct-04 01:50:43.785 [main] DEBUG nextflow.Session - Session start invoked
+Oct-04 01:50:44.559 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-04 01:50:44.642 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /seqwell-fastq/20250929_MiSeq-Yoda/; pattern: {plate_1_FASTQ}/*_R{1,2}_001.fastq.gz; options: [:]
+Oct-04 01:50:44.986 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:get_ATCG_counts` matches process get_ATCG_counts
+Oct-04 01:50:44.990 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: awsbatch
+Oct-04 01:50:44.990 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'awsbatch'
+Oct-04 01:50:44.993 [main] DEBUG nextflow.executor.Executor - [warm up] executor > awsbatch
+Oct-04 01:50:45.040 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-executor, limiter:RateLimiter[stableRate=50.0qps], poolSize:80, maxPoolSize:80, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
+Oct-04 01:50:45.053 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-reaper, limiter:RateLimiter[stableRate=50.0qps], poolSize:80, maxPoolSize:80, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
+Oct-04 01:50:45.054 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - Creating parallel monitor for executor 'awsbatch' > pollInterval=10s; dumpInterval=5m
+Oct-04 01:50:45.268 [main] INFO  n.cloud.aws.batch.AwsBatchExecutor - Uploading local `bin` scripts folder to s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/tmp/13/c68803abb6c9c44907ad8d2483fd99/bin
+Oct-04 01:50:45.587 [main] DEBUG nextflow.Global - Using AWS credentials defined in nextflow config file
+Oct-04 01:50:45.706 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - [AWS BATCH] Executor options=AwsOptions(cliPath:/home/ec2-user/miniconda/bin/aws, storageClass:null, storageEncryption:null, remoteBinDir:/seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/tmp/13/c68803abb6c9c44907ad8d2483fd99/bin, region:us-east-2, maxParallelTransfers:4, maxTransferAttempts:5, delayBetweenAttempts:10s, retryMode:standard, maxSpotAttempts:5, debug:null, fetchInstanceType:false, jobRole:null, volumes:[], awsCli:/home/ec2-user/miniconda/bin/aws --region us-east-2)
+Oct-04 01:50:45.861 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SEQLOGO` matches process SEQLOGO
+Oct-04 01:50:45.862 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: awsbatch
+Oct-04 01:50:45.862 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'awsbatch'
+Oct-04 01:50:45.886 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: SEQLOGO, get_ATCG_counts
+Oct-04 01:50:45.887 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Oct-04 01:50:45.887 [main] DEBUG nextflow.Session - Session await
+Oct-04 01:50:46.875 [Actor Thread 16] DEBUG c.u.s3fs.S3FileSystemProvider - S3 parallel download with direct buffer: s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/9e/83fa30915bd1f4287b03a18432ad82/.exitcode
+Oct-04 01:50:47.234 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [9e/83fa30] Cached process > get_ATCG_counts
+Oct-04 01:50:47.432 [Actor Thread 16] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=4; maxSize=4; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-04 01:50:48.133 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] [AWS BATCH] Found job definition name=nf-rocker-tidyverse-latest:1; container=rocker/tidyverse:latest
+Oct-04 01:50:48.240 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] submitted > job=552687e5-5c18-46e4-a92a-b629dd93b2bd; work-dir=s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/01/d16cf1a9a1bafbb362fefa27732314
+Oct-04 01:50:48.241 [AWSBatch-executor-1] INFO  nextflow.Session - [01/d16cf1] Submitted process > SEQLOGO
+Oct-04 01:55:55.085 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: SEQLOGO; status: RUNNING; exit: -; error: -; workDir: s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/01/d16cf1a9a1bafbb362fefa27732314]
+Oct-04 01:56:35.152 [Task monitor] DEBUG c.u.s3fs.S3FileSystemProvider - S3 parallel download with direct buffer: s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/01/d16cf1a9a1bafbb362fefa27732314/.exitcode
+Oct-04 01:56:35.233 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: SEQLOGO; status: COMPLETED; exit: 0; error: -; workDir: s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/01/d16cf1a9a1bafbb362fefa27732314]
+Oct-04 01:56:35.369 [main] DEBUG nextflow.Session - Session await > all process finished
+Oct-04 01:56:35.371 [Task monitor] DEBUG c.u.s3fs.S3FileSystemProvider - S3 parallel download with direct buffer: s3://seqwell-dev/work/20250929_MiSeq-Yoda/ATCG_counts_w_N/work/01/d16cf1a9a1bafbb362fefa27732314/.command.trace
+Oct-04 01:56:35.455 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-04 01:56:36.469 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=1; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=5m; failedDuration=0ms; cachedDuration=2m 1s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=2; peakMemory=7 GB; ]
+Oct-04 01:56:36.490 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-04 01:56:36.490 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-amazon@1.7.2'
+Oct-04 01:56:36.490 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-amazon
+Oct-04 01:56:36.490 [main] DEBUG c.u.s3fs.ng.S3ParallelDownload - Shutdown S3 downloader
+Oct-04 01:56:36.491 [main] DEBUG c.u.s3fs.ng.S3ParallelDownload - Shutdown S3 downloader - done
+Oct-04 01:56:36.512 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
