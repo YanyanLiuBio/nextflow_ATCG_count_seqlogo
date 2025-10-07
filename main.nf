@@ -1,6 +1,6 @@
 nextflow.enable.dsl = 2
 
-include { GET_ATCG_COUNTS } from './modules/gt_ATCG_counts.nf'
+include { GET_ATCG_COUNTS } from './modules/get_ATCG_counts.nf'
 include { SEQLOGO } from './modules/seqlogo.nf'
 
 fq_ch = Channel
